@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<gfx-xform version="1">
+    <input file="../data/ReactASM.png" type="png" tile-width="8" tile-height="8" width="128" height="128" />
+    <output file="../data/ReactASM.inc">
+        <tiles var-name="RASMTiles"/>
+        <maps pointers-size="8">
+            <map var-name="map_blank" left="0" top="0" width="1" height="1"/>
+            <map var-name="map_top_left_corner_button" left="1" top="0" width="1" height="1"/>
+            <map var-name="map_top_middle_button" left="2" top="0" width="1" height="1"/>
+            <map var-name="map_top_right_corner_button" left="3" top="0" width="1" height="1"/>
+            <map var-name="map_bottom_left_button" left="4" top="0" width="1" height="1"/>
+            <map var-name="map_bottom_middle_button" left="5" top="0" width="1" height="1"/>
+            <map var-name="map_bottom_right_button" left="6" top="0" width="1" height="1"/>
+            <map var-name="map_left_button" left="7" top="0" width="1" height="1"/>
+            <map var-name="map_right_button" left="8" top="0" width="1" height="1"/>
+            <map var-name="map_middle_button" left="9" top="0" width="1" height="1"/>
+            <map var-name="map_press_start" left="0" top="1" width="11" height="1"/>
+        </maps>     
+    </output>
+</gfx-xform>
