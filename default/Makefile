@@ -12,7 +12,7 @@ INFO=../gameinfo.properties
 
 ## Kernel settings
 KERNEL_DIR = ../../../kernel
-KERNEL_OPTIONS = -DVIDEO_MODE=3 -DSCROLLING=0 -DMAX_SPRITES=32 -DRAM_TILES_COUNT=32
+KERNEL_OPTIONS = -DVIDEO_MODE=3 -DSCROLLING=0 -DMAX_SPRITES=0 -DRAM_TILES_COUNT=0
 
 
 ## Options common to compile, link and assembly rules
@@ -21,7 +21,7 @@ COMMON = -mmcu=$(MCU)
 ## Compile options common for all C compilation units.
 CFLAGS = $(COMMON)
 CFLAGS += -Wall -gdwarf-2 -std=gnu99 -DF_CPU=28636360UL -Os -fsigned-char -ffunction-sections -fno-toplevel-reorder
-CFLAGS += -MD -MP -MT $(*F).o -MF dep/$(@F).d 
+CFLAGS += -MD -MP -MT $(*F).o -MF dep/$(@F).d
 CFLAGS += $(KERNEL_OPTIONS)
 
 
@@ -32,8 +32,8 @@ ASMFLAGS += -x assembler-with-cpp -Wa,-gdwarf2
 
 ## Linker flags
 LDFLAGS = $(COMMON)
-LDFLAGS += -Wl,-Map=$(GAME).map 
-LDFLAGS += -Wl,-gc-sections 
+LDFLAGS += -Wl,-Map=$(GAME).map
+LDFLAGS += -Wl,-gc-sections
 
 
 ## Intel Hex file production flags
@@ -45,13 +45,13 @@ HEX_EEPROM_FLAGS += --change-section-lma .eeprom=0 --no-change-warnings
 
 
 ## Objects that must be built in order to link
-OBJECTS = uzeboxVideoEngineCore.o uzeboxCore.o uzeboxSoundEngine.o uzeboxSoundEngineCore.o uzeboxVideoEngine.o $(GAME).o 
+OBJECTS = uzeboxVideoEngineCore.o uzeboxCore.o uzeboxSoundEngine.o uzeboxSoundEngineCore.o uzeboxVideoEngine.o $(GAME).o
 
 ## Objects explicitly added by the user
-LINKONLYOBJECTS = 
+LINKONLYOBJECTS =
 
 ## Include Directories
-INCLUDES = -I"$(KERNEL_DIR)" 
+INCLUDES = -I"$(KERNEL_DIR)"
 
 ## Build
 all: ../data/ReactASM.inc $(TARGET) $(GAME).hex $(GAME).eep $(GAME).lss $(GAME).uze size
@@ -114,4 +114,3 @@ clean:
 
 ## Other dependencies
 -include $(shell mkdir dep 2>/dev/null) $(wildcard dep/*)
-

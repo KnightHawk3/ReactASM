@@ -15,6 +15,14 @@
             <map var-name="map_right_button" left="8" top="0" width="1" height="1"/>
             <map var-name="map_middle_button" left="9" top="0" width="1" height="1"/>
             <map var-name="map_press_start" left="0" top="1" width="11" height="1"/>
-        </maps>     
+            <map var-name="map_up_arrow" left="11" top="1" width="1" height="1"/>
+            <map var-name="map_right_arrow" left="12" top="1" width="1" height="1"/>
+            <map var-name="map_down_arrow" left="13" top="1" width="1" height="1"/>
+            <map var-name="map_left_arrow" left="14" top="1" width="1" height="1"/>
+            <map var-name="map_one" left="0" top="2" width="1" height="1"/>
+            <map var-name="map_two" left="1" top="2" width="1" height="1"/>
+            <map var-name="map_three" left="2" top="2" width="1" height="1"/>
+            <map var-name="map_game_over" left="3" top="2" width="1" height="1"/>
+        </maps>
     </output>
 </gfx-xform>
